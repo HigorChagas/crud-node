@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/show.css">
+    <title>Tabela de dados</title>
+</head>
+<body>
+    <table border="1" class="tabela-clientes">
+        <thead>
+            <tr>
+                <th>Meta</th>
+                <th>Competência</th>
+                <th>Empresa</th>
+                <th>Inscrição estadual</th>
+                <th>CNPJ</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(function(details) { %>
+                <tr>
+                    <td><%= details.meta %></td>
+                    <td><%= details.competencia %></td>
+                    <td><%= details.empresa %></td>
+                    <td><%= details.ie %></td>
+                    <td><%= details.cnpj %></td>
+                    <td><a href="/edit/<%= details._id %>">Editar</a> - <a href="/delete/<%= details._id %>">Deletar</a></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <button><a href="/">Voltar</a></button>
+</body>
+</html>

@@ -1,0 +1,47 @@
+.tabela-clientes {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabela-clientes td, .tabela-clientes th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tabela-clientes tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+.tabela-clientes tr:hover {
+    background-color: #DDD;
+}
+
+.tabela-clientes th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2e38a0;
+    color: white;
+}
+
+button {
+    padding: 10px 10px;
+    margin: 15px;
+    background-color: #2e38a0;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+
+}
+
+button a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    margin: 0;   
+}

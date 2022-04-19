@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formulário de contato</title>
+</head>
+<body>
+    <header class="header">
+        <h1 id="title">Cadastro de clientes</h1>
+    </header>
+    <form action="/show" method="POST" id="form-cadastro">
+        <div class="form-group">
+            <label for="meta" id="meta-label">Meta</label>
+            <input type="text" id="meta" placeholder="Digite a meta da empresa" name="meta" required>
+        </div>
+        <div class="form-group">
+            <label for="competencia" id="competencia-label">Competencia</label>
+            <input type="date" id="competencia" placeholder="Digite a data da competência" name="competencia" required>
+        </div>
+        <div class="form-group">
+            <label for="empresa" id="empresa-label">Empresa</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa">
+        </div>
+        <div class="form-group">
+            <label for="ie" id="ie-label">Inscrição estadual</label>
+            <input type="number" id="ie" name="ie" placeholder="Digite a inscrição estadual">
+        </div>
+        <div class="form-group">
+            <label for="cnpj" id="cnpj-label">CNPJ</label>
+            <input type="number" id="cnpj" name="cnpj" placeholder="Digite o CNPJ">
+        </div> 
+        <div class="form-group">
+            <button class="btn-submit" type="submit" id="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>
