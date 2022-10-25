@@ -1,13 +1,10 @@
 require('dotenv').config()
 const express = require('express');
-const multer = require('multer');
 const bodyParser = require('body-parser');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 const uri = process.env.BD_LOGIN // Variável que faz a conexão com o banco de dados.
-
-const upload = multer({ dest: 'uploads/' });
 
 MongoClient.connect(uri, (err, client) => {
     if(err) return console.log(err);
