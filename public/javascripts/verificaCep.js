@@ -1,7 +1,7 @@
 (function() {
     const cep = document.querySelector('input[name=cep]');
-    const endereco = 
-        cep.addEventListener('click', e => {
+
+        cep.addEventListener('blur', e => {
             const value = cep.value.replace(/[^0-9]+/, '');
             const url = `https://viacep.com.br/ws/${value}/json/`;
             

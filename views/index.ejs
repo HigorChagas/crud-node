@@ -18,11 +18,11 @@
         </div>
         <div class="form-group">
             <label for="email" id="email-label">E-mail</label>
-            <input type="email" id="email" placeholder="Digite seu e-mail" name="email" required>
+            <input type="email" id="email" placeholder="Digite seu e-mail" name="email" onkeyup="validaEmail(email)" required>
         </div>
         <div class="form-group">
             <label for="telefone" id="telefone-label">Telefone</label>
-            <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone">
+            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" maxlength="15" onkeyup="handlePhone(event)">
         </div>
         <div class="form-group">
             <label for="cep" id="cep-label">CEP</label>
@@ -50,5 +50,7 @@
     </form>
 
     <script src="javascripts/verificaCep.js"></script>
+    <script src="javascripts/verificaTelefone.js"></script>
+    <script src="javascripts/validaEmail.js"></script>
 </body>
 </html>

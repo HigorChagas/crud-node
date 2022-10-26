@@ -55,7 +55,7 @@ app.route('/edit/:id')
         db.collection('data').find(ObjectId(id)).toArray((err, results) => {
             if(err) return res.send(err);
             res.render('edit.ejs', { data: results });
-        })
+        });
     })
     .post((req, res) => {
         const id = req.params.id;
@@ -65,8 +65,8 @@ app.route('/edit/:id')
         const cep = req.body.cep;
         const endereco = req.body.endereco;
         const bairro = req.body.bairro;
-        const cidade = red.body.cidade;
-        const estado = red.body.estado
+        const cidade = req.body.cidade;
+        const estado = req.body.estado
 
         db.collection('data').updateOne({_id: ObjectId(id)}, {
             $set: {

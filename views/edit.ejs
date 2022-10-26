@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/edit.css">
+    <link rel="stylesheet" href="/css/edit.css">
     <title>Editar banco de dados</title>
 </head>
 <body>
-    <h2>Editar registros de clientes</h2>
+    <h2>Editar registros</h2>
     <% data.forEach(function(details) { %>
         <form action="/edit/<%= details._id %>" method="POST">
-            <input type="text" value="<%= details.nome%>" name="Nome">
-            <input type="email" value="<%= details.email%>" name="Email">
-            <input type="number" value="<%= details.telefone%>" name="telefone">
-            <input type="number" value="<%= details.cep%>" name="cep">
-            <input type="text" value="<%= details.endereco%>" name="endereco">
-            <input type="text" value="<%= details.bairro%>" name="bairro">
-            <input type="text" value="<%= details.cidade%>" name="cidade">
-            <input type="text" value="<%= details.estado%>" name="estado">
+            <input type="text" value="<%= details.nome%>" name="Nome" placeholder="Nome">
+            <input type="email" value="<%= details.email%>" name="Email" placeholder="E-mail">
+            <input type="tel" value="<%= details.telefone%>" name="telefone" onkeyup="handlePhone(event)" maxlength="15" placeholder="Telefone">
+            <input type="number" value="<%= details.cep%>" name="cep" placeholder="CEP">
+            <input type="text" value="<%= details.endereco%>" name="endereco" placeholder="Endereço">
+            <input type="text" value="<%= details.bairro%>" name="bairro" placeholder="Bairro">
+            <input type="text" value="<%= details.cidade%>" name="cidade" placeholder="Cidade">
+            <input type="text" value="<%= details.estado%>" name="estado" placeholder="Estado">
             <br>
-            <button><a href="/show">Todos</a></button>
             <button type="submit">Editar</button>
+            <button><a href="/show">Todos</a></button>
         </form>
     <% }) %>
+
+    <script src="/javascripts/verificaTelefone.js"></script>
+    <script src="/javascripts/verificaCep.js"></script>
 </body>
 </html>
