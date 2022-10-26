@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">
-        <h1 id="title">Cadastro de pessoas</h1>
+        <h1 id="title">Formulário de cadastro</h1>
     </header>
     <form action="/show" method="POST" id="form-cadastro">
         <div class="form-group">
@@ -37,12 +37,18 @@
             <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro">
         </div>
         <div class="form-group">
-            <label for="cidade" id="cidade-label">Bairro</label>
+            <label for="cidade" id="cidade-label">Cidade</label>
             <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade">
-        </div> 
+        </div>
+        <div class="form-group">
+            <label for="estado" id="estado-label">Estado</label>
+            <input type="text" id="estado" name="estado" placeholder="Digite o estado">
+        </div>
         <div class="form-group">
             <button class="btn-submit" type="submit" id="submit">Enviar</button>
         </div>
     </form>
+
+    <script src="javascripts/verificaCep.js"></script>
 </body>
 </html>

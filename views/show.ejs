@@ -17,6 +17,8 @@
                 <th>CEP</th>
                 <th>Endereço</th>
                 <th>Bairro</th>
+                <th>Cidade</th>
+                <th>Estado</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -29,6 +31,8 @@
                     <td><%= details.cep %></td>
                     <td><%= details.endereco %></td>
                     <td><%= details.bairro %></td>
+                    <td><%= details.cidade %></td>
+                    <td><%= details.estado %></td>
                     <td><a href="/edit/<%= details._id %>">Editar</a> - <a href="/delete/<%= details._id %>">Deletar</a></td>
                 </tr>
             <% }) %>

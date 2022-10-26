@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const path = require('path');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 const uri = process.env.BD_LOGIN // Variável que faz a conexão com o banco de dados.
@@ -15,7 +16,7 @@ MongoClient.connect(uri, (err, client) => {
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname + '/public')));
 
 
 app.set('vcepw engine', 'ejs');
@@ -64,6 +65,8 @@ app.route('/edit/:id')
         const cep = req.body.cep;
         const endereco = req.body.endereco;
         const bairro = req.body.bairro;
+        const cidade = red.body.cidade;
+        const estado = red.body.estado
 
         db.collection('data').updateOne({_id: ObjectId(id)}, {
             $set: {
@@ -72,7 +75,9 @@ app.route('/edit/:id')
                 telefone: telefone,
                 cep: cep,
                 endereco: endereco,
-                bairro: bairro
+                bairro: bairro,
+                cidade: cidade,
+                estado: estado
             }
         }, (err, result) => {
             if(err) return res.send(err);
