@@ -35,7 +35,11 @@ button {
     font-size: 16px;
     color: white;
     cursor: pointer;
+}
 
+button:hover {
+    background-color: #111758;
+    transition: 300ms;
 }
 
 button a {

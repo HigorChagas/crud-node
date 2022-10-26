@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 
-app.set('view engine', 'ejs');
+app.set('vcepw engine', 'ejs');
 
 
 app.get('/', (req, res) => {
@@ -58,19 +58,21 @@ app.route('/edit/:id')
     })
     .post((req, res) => {
         const id = req.params.id;
-        const meta = req.body.meta;
-        const competencia = req.body.competencia;
-        const empresa = req.body.empresa;
-        const ie = req.body.ie;
-        const cnpj = req.body.cnpj;
+        const nome = req.body.nome;
+        const email = req.body.email;
+        const telefone = req.body.telefone;
+        const cep = req.body.cep;
+        const endereco = req.body.endereco;
+        const bairro = req.body.bairro;
 
         db.collection('data').updateOne({_id: ObjectId(id)}, {
             $set: {
-                meta: meta,
-                competencia: competencia,
-                empresa: empresa,
-                ie: ie,
-                cnpj: cnpj
+                nome: nome,
+                email: email,
+                telefone: telefone,
+                cep: cep,
+                endereco: endereco,
+                bairro: bairro
             }
         }, (err, result) => {
             if(err) return res.send(err);

@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="cep=edge">
+    <meta name="vcepwport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/show.css">
     <title>Tabela de dados</title>
 </head>
@@ -11,22 +11,24 @@
     <table border="1" class="tabela-clientes">
         <thead>
             <tr>
-                <th>Meta</th>
-                <th>Competência</th>
-                <th>Empresa</th>
-                <th>Inscrição estadual</th>
-                <th>CNPJ</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>CEP</th>
+                <th>Endereço</th>
+                <th>Bairro</th>
                 <th>Ações</th>
             </tr>
         </thead>
         <tbody>
             <% data.forEach(function(details) { %>
                 <tr>
-                    <td><%= details.meta %></td>
-                    <td><%= details.competencia %></td>
-                    <td><%= details.empresa %></td>
-                    <td><%= details.ie %></td>
-                    <td><%= details.cnpj %></td>
+                    <td><%= details.nome %></td>
+                    <td><%= details.email %></td>
+                    <td><%= details.telefone %></td>
+                    <td><%= details.cep %></td>
+                    <td><%= details.endereco %></td>
+                    <td><%= details.bairro %></td>
                     <td><a href="/edit/<%= details._id %>">Editar</a> - <a href="/delete/<%= details._id %>">Deletar</a></td>
                 </tr>
             <% }) %>

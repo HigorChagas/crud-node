@@ -5,37 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Formulário de contato</title>
+    <title>Formulário de cadastro</title>
 </head>
 <body>
     <header class="header">
-        <h1 id="title">Cadastro de clientes</h1>
+        <h1 id="title">Cadastro de pessoas</h1>
     </header>
     <form action="/show" method="POST" id="form-cadastro">
         <div class="form-group">
-            <label for="meta" id="meta-label">Meta</label>
-            <input type="text" id="meta" placeholder="Digite a meta da empresa" name="meta" required>
+            <label for="nome" id="nome-label">Nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome" name="nome" required>
         </div>
         <div class="form-group">
-            <label for="competencia" id="competencia-label">Competencia</label>
-            <input type="date" id="competencia" placeholder="Digite a data da competência" name="competencia" required>
+            <label for="email" id="email-label">E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" name="email" required>
         </div>
         <div class="form-group">
-            <label for="empresa" id="empresa-label">Empresa</label>
-            <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa">
+            <label for="telefone" id="telefone-label">Telefone</label>
+            <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone">
         </div>
         <div class="form-group">
-            <label for="ie" id="ie-label">Inscrição estadual</label>
-            <input type="number" id="ie" name="ie" placeholder="Digite a inscrição estadual">
+            <label for="cep" id="cep-label">CEP</label>
+            <input type="text" id="cep" name="cep" placeholder="CEP">
         </div>
         <div class="form-group">
-            <label for="cnpj" id="cnpj-label">CNPJ</label>
-            <input type="number" id="cnpj" name="cnpj" placeholder="Digite o CNPJ">
+            <label for="endereco" id="endereco-label">Endereço</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Digite o endereco">
+        </div>
+        <div class="form-group">
+            <label for="bairro" id="bairro-label">Bairro</label>
+            <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro">
+        </div>
+        <div class="form-group">
+            <label for="cidade" id="cidade-label">Bairro</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade">
         </div> 
         <div class="form-group">
             <button class="btn-submit" type="submit" id="submit">Enviar</button>
         </div>
     </form>
-    <script src="/scripts/validaCNPJ.js"></script>
 </body>
 </html>

@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/edit.css">
+    <link rel="stylesheet" href="../public/css/edit.css">
     <title>Editar banco de dados</title>
 </head>
 <body>
     <h2>Editar registros de clientes</h2>
     <% data.forEach(function(details) { %>
         <form action="/edit/<%= details._id %>" method="POST">
-            <input type="text" value="<%= details.meta%>" name="meta">
-            <input type="date" value="<%= details.competencia%>" name="competencia">
-            <input type="text" value="<%= details.empresa%>" name="empresa">
-            <input type="number" value="<%= details.ie%>" name="ie">
-            <input type="number" value="<%= details.cnpj%>" name="cnpj">
+            <input type="text" value="<%= details.nome%>" name="Nome">
+            <input type="email" value="<%= details.email%>" name="Email">
+            <input type="number" value="<%= details.telefone%>" name="telefone">
+            <input type="number" value="<%= details.cep%>" name="cep">
+            <input type="text" value="<%= details.endereco%>" name="endereco">
+            <input type="text" value="<%= details.bairro%>" name="bairro">
             <br>
             <button><a href="/show">Todos</a></button>
             <button type="submit">Editar</button>
