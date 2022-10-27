@@ -11,8 +11,8 @@
     <h2>Editar registros</h2>
     <% data.forEach(function(details) { %>
         <form action="/edit/<%= details._id %>" method="POST">
-            <input type="text" value="<%= details.nome%>" name="Nome" placeholder="Nome">
-            <input type="email" value="<%= details.email%>" name="Email" placeholder="E-mail">
+            <input type="text" value="<%= details.nome%>" name="nome" placeholder="Nome">
+            <input type="email" value="<%= details.email%>" name="email" placeholder="E-mail">
             <input type="tel" value="<%= details.telefone%>" name="telefone" onkeyup="handlePhone(event)" maxlength="15" placeholder="Telefone">
             <input type="number" value="<%= details.cep%>" name="cep" placeholder="CEP">
             <input type="text" value="<%= details.endereco%>" name="endereco" placeholder="Endereço">
