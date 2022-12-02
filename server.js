@@ -19,11 +19,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname + '/public')));
 
 
-app.set('vcepw engine', 'ejs');
+app.set('view engine', 'ejs');
 
 
 app.get('/', (req, res) => {
     res.render('index.ejs');
+});
+
+app.get('/login.ejs', (req, res) => {
+    res.render('login.ejs');
 });
 
 app.get('/', (req, res) => {

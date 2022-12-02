@@ -19,6 +19,28 @@ body {
 .header {
     margin-bottom: 2rem;
 }
+
+.btn-login {
+    background-color: rgba(61, 61, 139, 0.8);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    margin: 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.btn-login:hover {
+    background-color: rgba(21, 21, 80, 0.8);
+    transition: 200ms ease-in-out;
+}
+
 #title {
     text-align: center;
     font-weight:200;
