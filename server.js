@@ -68,6 +68,8 @@ app.route('/edit/:id')
         const telefone = req.body.telefone;
         const cep = req.body.cep;
         const endereco = req.body.endereco;
+        const numero = req.body.numero;
+        const complemento = req.body.numero;
         const bairro = req.body.bairro;
         const cidade = req.body.cidade;
         const estado = req.body.estado
@@ -79,6 +81,8 @@ app.route('/edit/:id')
                 telefone: telefone,
                 cep: cep,
                 endereco: endereco,
+                numero: numero,
+                complemento: complemento,
                 bairro: bairro,
                 cidade: cidade,
                 estado: estado
