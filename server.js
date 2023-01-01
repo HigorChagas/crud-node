@@ -20,7 +20,6 @@ app.use(express.static(path.join(__dirname + '/public')));
 
 app.set('view engine', 'ejs');
 
-
 app.get('/', (req, res) => {
     res.render('index.ejs');
 });
@@ -39,8 +38,6 @@ app.get('/show', (req, res) => {
         res.render('show.ejs', { data: results });
     });
 });
-
-
 
 app.post('/show', (req, res) => {
     db.collection('data').insertOne(req.body, (err, result) => {
