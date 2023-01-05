@@ -41,8 +41,6 @@ app.get('/show', (req, res) => {
     });
 });
 
-
-
 app.post('/show', (req, res) => {
     db.collection('data').insertOne(req.body, (err, result) => {
         if(err) throw err;
